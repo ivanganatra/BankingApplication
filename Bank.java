@@ -10,8 +10,8 @@ public class Bank{
     boolean isFirstTransaction;
     String username;
     String password;
-    ArrayDeque<Pair> previousTransactions=new ArrayDeque<Pair>(10);
-    // Queue<Pair>previousTransactions=new LinkedList<Pair>();
+    ArrayDeque<User> previousTransactions=new ArrayDeque<User>(10);
+    // Queue<User>previousTransactions=new LinkedList<User>();
 
     Bank()
     {
@@ -57,7 +57,7 @@ public class Bank{
             if(previousTransactions.size()==10)
                 previousTransactions.removeFirst();
                 balance-=amount;
-            previousTransactions.add(new Pair("Withdraw",amount,balance));
+            previousTransactions.add(new User("Withdraw",amount,balance));
             if(balance==0) {
                 System.out.println("Now you don't have any balance in the account.");
             }
@@ -74,7 +74,7 @@ public class Bank{
                 return false;
             }
             balance+=amount;
-            previousTransactions.add(new Pair("Deposit",amount,balance));
+            previousTransactions.add(new User("Deposit",amount,balance));
         return true;
     }
     int currentBalance()
@@ -94,7 +94,7 @@ public class Bank{
             int count=1;
             for(Iterator itr=previousTransactions.iterator();itr.hasNext();count++)
             {
-                Pair p=(Pair)itr.next();
+                User p=(User)itr.next();
                 System.out.printf("%-4d  %-28s %-8d  %-8d\n",count,p.typeOfTransaction,p.amountofTransaction,p.balance);
                 // System.out.println(count+") "+p.typeOfTransaction+": "+p.amountofTransaction);
 
