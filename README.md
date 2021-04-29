@@ -5,7 +5,6 @@ Some of its features are:
 2)Depositing some amount.         
 3)Checking the balance and last 10 Transactions.          
 4)Listing out all the facilities and their facility number.
-
 5)Exiting the banking application.                      
 6)Viewing Account Details.
 
