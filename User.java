@@ -1,4 +1,4 @@
-package BankingApplicationPackage;
+import java.util.*;
 public class User{
     String typeOfTransaction;
     int amountofTransaction;

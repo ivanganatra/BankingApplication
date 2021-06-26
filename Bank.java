@@ -1,4 +1,3 @@
-package BankingApplicationPackage;
 import java.util.Vector;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -97,7 +96,6 @@ public class Bank{
                 User p=(User)itr.next();
                 System.out.printf("%-4d  %-28s %-8d  %-8d\n",count,p.typeOfTransaction,p.amountofTransaction,p.balance);
                 // System.out.println(count+") "+p.typeOfTransaction+": "+p.amountofTransaction);
-
             }
         }
     }
